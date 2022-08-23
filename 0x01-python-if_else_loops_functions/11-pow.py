@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 def pow(a, b):
     # this will hold the result of the multiplication
     result = 1

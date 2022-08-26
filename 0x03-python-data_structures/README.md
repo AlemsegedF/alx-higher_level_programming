@@ -1,1 +1,1 @@
-This directory is for projects related to data structures in python
+This directory is for ALX  projects related to data structures in python

@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stddef.h>
+
 
 /**
  * is_palindrome - checks if a linked list is a palindrom
@@ -11,16 +11,15 @@ int is_palindrome(listint_t **head)
 {
 	int len, i;
 	listint_t  *copy;
+	int array[100];
 
+	if (*head == NULL)
+		return (1);
 	copy = (*head);
 	for (len = 0; copy->next != NULL; len++)
 	{
 		copy = copy->next;
 	}
-	if (len == 0)
-		return (1);
-	int array[len + 1];
-
 	for (i = 0; i <= len; i++)
 	{
 		array[i] = (*head)->n;

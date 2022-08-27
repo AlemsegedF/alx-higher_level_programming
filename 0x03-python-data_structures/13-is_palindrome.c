@@ -11,7 +11,6 @@ int is_palindrome(listint_t **head)
 {
 	int len, i;
 	listint_t  *copy;
-	int array[100];
 
 	if (*head == NULL)
 		return (1);
@@ -20,6 +19,8 @@ int is_palindrome(listint_t **head)
 	{
 		copy = copy->next;
 	}
+	int array[len + 1];
+
 	for (i = 0; i <= len; i++)
 	{
 		array[i] = (*head)->n;

@@ -9,7 +9,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	int len, i;
+	int len, i, *array;
 	listint_t  *copy;
 
 	if (*head == NULL)
@@ -19,8 +19,7 @@ int is_palindrome(listint_t **head)
 	{
 		copy = copy->next;
 	}
-	int array[len + 1];
-
+	array = (int *)malloc(sizeof(int) * len);
 	for (i = 0; i <= len; i++)
 	{
 		array[i] = (*head)->n;
@@ -29,8 +28,12 @@ int is_palindrome(listint_t **head)
 	for (i = 0; i <= len / 2; i++)
 	{
 		if (array[i] != array[len])
+		{
+			free(array);
 			return (0);
+		}
 		len--;
 	}
+	free(array);
 	return (1);
 }

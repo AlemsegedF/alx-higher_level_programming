@@ -12,5 +12,7 @@ def roman_to_int(roman_string):
                 num = num - 1
             else:
                 num = num + r_d[i]
+        else:
+            return 0
 
     return num
